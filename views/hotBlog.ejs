@@ -1,0 +1,25 @@
+<section class="home">
+    
+    <h3>Hot Posts</h3>
+
+    <% arr.forEach(post =>{ %>
+        <a href="/post/<%= post._id %>">
+            <div class="post">
+                <!-- <img src="/img/hero-bg.jpg" alt="post image"> -->
+                <div>
+                    <h3><%= post.blogTittle %></h3>
+                    <small><%= post.createdAt %></small>
+                    <p>HeadLinee: <%= post.blogHeadline %></b><br>
+                    <b>Blog Source: <%= post.blogBy %></b>
+                </div>
+            </div>
+        </a>
+    <% }) %>
+
+</section>
+
+
+
+
+
+

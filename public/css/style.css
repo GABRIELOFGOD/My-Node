@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* styling header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    background: #e2e2e2;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, .85);
+    top: 0;
+    position: sticky;
+    margin: auto;
+    width: 100%;
+    z-index: 999;
+}
+
+.header .logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+.logo h2{
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, .92);
+    color: blue;
+}
+
+.header .myNav{
+    display: none;
+    position: absolute;
+    background: #e2e2e2;
+    width: 150px;
+    right: 0px;
+    text-align: center;
+    top: 50px;
+    margin: auto;
+    height: fit-content;
+    transition: .5s;
+}
+
+.revealer{
+    display: block;
+    position: absolute;
+    background: #e2e2e2;
+    width: 150px;
+    right: 0px;
+    text-align: center;
+    top: 50px;
+    margin: auto;
+    height: fit-content;
+    transition: .5s;
+}
+
+.header nav ul{
+    margin: auto;
+    list-style: none;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.header nav ul li{
+    padding: 15px;
+    color: black;
+    transition: .2s;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.header nav ul li:hover{
+    color: blue;
+    background: white;
+    scale: .9;
+}
+
+.header nav .register{
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    margin: 10px 0;
+}
+
+.header nav .register a{
+    background: blue;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    position: relative;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.header nav .register a:hover{
+    background: #e2e2e2;
+    border: blue 1px solid;
+    color: blue;
+}
+
+.header .hamburger{
+    margin: auto;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+}
+
+.header .hamburger i{
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    bottom: -10px;
+}
+
+.header .hamburger i:last-child{
+    display: none;
+    cursor: pointer;
+}
+
+.header .hamburger:hover{
+    color: blue;
+    scale: 1.2;
+}
+
+/* styling heroe */
+
+.main{
+    max-width: 80%;
+    margin: auto;
+}
+
+.heroe{
+    margin: 20px auto;
+}
+
+.heroe h3{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.heroe img{
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* styling the post body */
+.post{
+    height: fit-content;
+    position: relative;
+    background: rgba(167, 166, 166, 0.212);
+    padding: 10px;
+    display: flex;
+    margin: 10px auto;
+    gap: 10px;
+    color: black;
+    transition: .3s;
+}
+
+.post:hover{
+    background: rgba(128, 128, 128, 0.39);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+}
+
+.post h3{
+    text-transform: capitalize;
+}
+
+.post small{
+    color: red;
+    font-size: .6rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.post p{
+    font-size: .8rem;
+    /* text-overflow: ellipsis; */
+    width: 100%;
+}
+
+.post b{
+    font-size: .6rem;
+    right: 3px;
+    text-transform: capitalize;
+    padding: 0;
+    position: absolute;
+    bottom: 3px;
+}
+
+.home{
+    margin-top: 50px;
+}
+
+.home .more{
+    margin: 50px auto;
+}
+
+.home .more a{
+    margin: 20px;
+    text-align: right;
+    padding: 15px;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.home a:hover{
+    color: blue;
+    border: 1px blue solid;
+    background: white;
+    scale: 1.1;
+}
+
+.home .home-post{
+    display: block;
+}
+
+.home .home-post h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.home-post small{
+    color: red;
+    font-size: .6rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.home .home-post img{
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.home .home-post p{
+    margin: 20px 0;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.comment{
+    margin: auto;
+}
+
+.comment form{
+    margin: auto;
+}
+
+.comment form input{
+    height: 25px;
+    width: 250px;
+    padding: 10px;
+    margin: 5px 0;
+    outline: none;
+}
+
+.comment form textarea{
+    outline: none;
+    padding: 10px;
+}
+
+.comment form button{
+    padding: 5px 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.comment form button:hover{
+    scale: .8;
+    border-radius: 10px;
+}
+
+.errorPage{
+    margin: 50px;
+    text-align: center;
+}
+
+.about{
+    margin: 30px;
+
+}
+
+.about h4{
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px;
+}
+
+.about p{
+    /* letter-spacing: .7rem; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    /* font-size: 1.1rem; */
+}
+
+.social-media{
+    text-align: center;
+    margin: 10px;
+}
+
+.social-media i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    background: blue;
+    color: white;
+}
+
+.social-media i:hover{
+    scale: .97;
+    background: rgba(0, 0, 255, 0.808);
+}
+
+
+/* styling Contact */
+.contact{
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.contact h4{
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+/* ====== styling the administration login page ======== */
+.login{
+    width: 100%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.login form{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 50px;
+    max-width: 400px;
+    border-radius:  5px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, .12);
+}
+
+.login form h2{
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.login form .error{
+    text-align: center;
+    color: red;
+    padding: 5px;
+    box-shadow: 1px 1px 1px rgba(128, 0, 0, 0.175);
+    margin-bottom: 10px;
+
+}
+
+.login form .form__inputs{
+    width: 100%;
+    display: block;
+
+}
+
+.form__inputs input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px blue solid;
+    border-radius: 3px;
+}
+
+.form__inputs button{
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+    color: white;
+    padding: 5px 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background: blue;
+    transition: .5s;
+}
+
+.form__inputs button:hover{
+    opacity: .9;
+}
+.form__inputs button:active{
+    scale: .8;
+}
+
+.success{
+    padding: 50px;
+    position: absolute;
+    top: -500px;
+    margin: auto;
+    max-width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .12);
+    transition: .5s;
+}
+
+.success h2{
+    color: green;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* styling the footer */
+footer{
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 0;
+    background: blue;
+}
+
+footer .newsletter{
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+footer .newsletter form{
+    align-items: center;
+    margin: 5px auto;
+    display: flex;
+
+}
+
+.newsletter form input{
+    /* padding: 25px; */
+    width: 250px;
+    padding: 10px;
+    border: none;
+    margin-right: 0;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    font-weight: bold;
+}
+
+.newsletter form input[placeholder]{
+    font-size: .6rem;
+}
+
+.newsletter form button{
+    padding: 7px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 0;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+footer .footer-middle{
+    display: flex;
+    width: 100%;
+}
+
+.footer-middle .logo h2{
+    text-transform: uppercase;
+    scale: .7;
+    display: flex;
+    left: 0;
+    color: white;
+}
+
+footer .social-media{
+    scale: .7;
+}
+
+footer .social-media i{
+    color: blue;
+    background: white;
+}
+
+footer .social-media i:hover{
+    background: rgba(255, 255, 255, 0.795);
+}
+
+footer small{
+    display: flex;
+    align-items: center;
+}
+
+

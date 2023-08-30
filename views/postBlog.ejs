@@ -1,0 +1,31 @@
+<section class="newBlog">
+    <form action="/postBlog" method="post">
+        <div class="ind ano">
+            <input type="text" name="blogTittle" id="blogTittle" required >
+            <label for="blogTittle" >post-Tittle</label>
+            <span></span>
+        </div>
+        <div class="ind ano">
+            <input type="text" name="blogHeadline" id="blogHeadline" required >
+            <label for="blogHeadline" >headline</label>
+            <span></span>
+        </div>
+        <div class="ind ano">
+            <textarea name="blogBody" id="blogBody" cols="30" rows="10" required ></textarea>
+            <label for="blogBody" >post-body</label>
+            <span></span>
+        </div>
+        <div class="ind ano">
+            <input type="text" name="blogBy" id="blogBy" >
+            <label for="blogBy" >blog-writer</label>
+            <span></span>
+        </div>
+        <div class="ind">
+            <input type="checkbox" name="hotBlog" id="hotBlog" value="hotBlog" >
+            <label for="hotBlog" >hot Blog</label>
+            <span></span>
+        </div>
+
+        <button class="submitBtn">Post</button>
+    </form>
+</section>

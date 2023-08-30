@@ -1,0 +1,79 @@
+<div class="login">
+    <!-- <div class="success message">
+        <h2>SUCCESS</h2>
+        <p>Welcome You have successfully created an Admin Account</p>
+    </div> -->
+    <form class="myForm">
+        <h2>Welcome Create a New Admin</h2>
+        <div class="form__inputs">
+            <input type="text" name="name" placeholder='Your Full Name' >
+            <div class="error name"></div>
+            <input type="email" name="email" placeholder='Your Email' >
+            <div class="error email"></div>
+            <input type="number" name="mobile" placeholder='Your Phone Number' >
+            <div class="error mobile"></div>
+            <input type="password" name="password" placeholder="Your password">
+            <div class="error password"></div>
+            <button>Create Admin</button>
+        </div>
+        
+    </form>
+
+    <script>
+
+        // ===== variable declaration ===== //
+        const nameError = document.querySelector('.name')
+        const emailError = document.querySelector('.email')
+        const mobileError = document.querySelector('.mobile')
+        const passwordError = document.querySelector('.password')
+
+        const form = document.querySelector('form')
+
+        //  ====== form event handler ====== //
+        form.addEventListener('submit', async function(e){
+            e.preventDefault();
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            mobileError.textContent = '';
+            passwordError.textContent = '';
+
+            
+            const name = form.name.value;
+            const email = form.email.value;
+            const mobile = form.mobile.value;
+            const password = form.password.value;
+
+            try {
+                const res = await fetch('/admin/register', {
+                    method: 'POST',
+                    body: JSON.stringify({ name, email, mobile, password }),
+                    headers: {'Content-Type': 'application/json'}
+                })
+                // console.log(res)
+                const data = await res.json()
+                console.log(data)
+                if(data.errors){
+                    nameError.textContent = data.errors.name;
+                    emailError.textContent = data.errors.email;
+                    mobileError.textContent = data.errors.mobile;
+                    passwordError.textContent = data.errors.password;
+                }
+
+                if(data.user){
+                    location.assign('/')
+                }
+                
+            } catch (err) {
+                console.log(err)
+            }
+
+
+        })
+
+
+
+        
+
+    </script>
+</div>

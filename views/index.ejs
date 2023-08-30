@@ -1,0 +1,46 @@
+<section class="heroe">
+    <h3>Welcome to Alejandro's Blog</h3>
+    <img src="/img/hero-bg.jpg" alt="heroe image">
+</section>
+
+<section class="latest">
+    <h3>Latest Posts</h3>
+
+    <% posts.forEach(post =>{ %>
+        <a href="/post/<%= post._id %>">
+            <div class="post">
+                <!-- <img src="/img/hero-bg.jpg" alt="post image"> -->
+                <div>
+                    <h3><%= post.blogTittle %></h3>
+                    <small><%= post.createdAt %></small>
+                    <p>HeadLinee: <%= post.blogHeadline %></b><br>
+                    <b>Blog Source: <%= post.blogBy %></b>
+                </div>
+            </div>
+        </a>
+    <% }) %>
+
+    <!-- <a href="/post">
+        <div class="post">
+            <img src="/img/hero-bg.jpg" alt="post image">
+            <div>
+                <h3>post tittle</h3>
+                <small>posted on</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, vitae.</p>
+                <b>posted by</b>
+            </div>
+        </div>
+    </a>
+    <a href="/post">
+        <div class="post">
+            <img src="/img/hero-bg.jpg" alt="post image">
+            <div>
+                <h3>post tittle</h3>
+                <small>posted on</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, vitae.</p>
+                <b>posted by</b>
+            </div>
+        </div>
+    </a> -->
+
+</section>

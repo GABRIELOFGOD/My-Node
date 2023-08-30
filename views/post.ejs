@@ -1,0 +1,47 @@
+<section class="home">
+    <div class="home-post">
+        <h3><%= onePost.blogTittle %></h3>
+        <!-- <img src="/img/hero-bg.jpg" alt="post image"> -->
+        <small>Date: <%= onePost.createdAt %></small>
+        <p><%= onePost.blogBody %></b>
+    </div>
+
+    <div class="comment">
+        <h4>What do you think about this post? </h4>
+
+        <form action="/post/<%= onePost._id %>" method="post">
+            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Comment" required ></textarea> <br>
+            <input type="email" name="email" id="email" placeholder="Your Email" ><br>
+            <input type="text" name="name" id="name" placeholder="Your Name" ><br>
+            <button>Comment</button>
+        </form>
+
+    </div>
+
+    <h3>Comments</h3>
+    <div class="commentSec">
+
+        <% comStore.forEach(post =>{ %>
+                <div class="post">
+                    <!-- <img src="/img/hero-bg.jpg" alt="post image"> -->
+                    <div>
+                        <h3><%= post.comment %></h3>
+                        <small><%= post.createdAt %></small>
+                        <p>HeadLinee: <%= post.email %></b><br>
+                        <b>Blog Source: <%= post.name %></b>
+                    </div>
+                </div>
+        <% }) %>
+
+    </div>
+    
+    <div class="more"><a href="/">Read More Blog</a></div>
+
+
+</section>
+
+
+
+
+
+
